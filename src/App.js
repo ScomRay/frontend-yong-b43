@@ -1,21 +1,20 @@
-import React from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom'
-import Routes from './Routes'
-import Container from '@material-ui/core/Container'
-import AuthContextProvider from './context/AuthContext'
+import React, { Component } from 'react';
+import './App.css'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Feed from './views/FeedView'
+import Login from './views/LoginView'
 
-function App() {
-  return (
-      <BrowserRouter>
-      <AuthContextProvider>
-        <Container maxWidth='lg'>
-          <Switch>
-            <Routes />
-          </Switch>
-        </Container>
-        </AuthContextProvider>
-      </BrowserRouter>
-  )
+class Routes extends Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/feed" component={Feed} />
+        </Switch>
+      </Router>
+    );
+  }
 }
 
-export default App;
+export default Routes;

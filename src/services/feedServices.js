@@ -1,25 +1,12 @@
-import {
-  FETCH_USER_BY_ID,
-  FETCH_USER_FEED,
-  CLEAR_USER_FEED,
-  CLEAR_USER_DETAILS
-} from '../actions/FetchUserData';
+import { FETCH_ALL_FEED, CLEAR_ALL_FEED } from '../actions/FetchAllFeed';
 
 const initialState = {
-  userDetails: null,
-  userFeed: []
+  feeds: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
-    case FETCH_USER_BY_ID:
-      return {
-        ...state,
-        userDetails: action.payload
-      };
-    case CLEAR_USER_DETAILS:
-      return initialState;
-    case FETCH_USER_FEED:
+    case FETCH_ALL_FEED:
       const values = action.payload
         ? Object.values(action.payload).slice()
         : [];
@@ -27,9 +14,9 @@ export default function(state = initialState, action) {
       values.map((value, i) => (value['key'] = keys[i]));
       return {
         ...state,
-        userFeed: values
+        feeds: values
       };
-    case CLEAR_USER_FEED:
+    case CLEAR_ALL_FEED:
       return initialState;
     default:
       return state;
