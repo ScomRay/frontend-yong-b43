@@ -76,11 +76,10 @@ class Login extends Component {
               <div class="col-lg-5 col-md-5 col-sm-5 left-column">
                 <hr />
                 <span class="quote-text">
-                  &ldquo;Every human being is the author of his own health or
-                  disease&rdquo;
+                  &ldquo;Un sueño no se hace realidad a través de la magia; toma sudor, determinación y trabajo duro&rdquo;
                 </span>
                 <hr />
-                <span class="quote-text quote-author">- Shobu_Live!</span>
+                <span class="quote-text quote-author">- Colin Powell</span>
               </div>
               <div class="col-lg-1 col-md-1 col-sm-1" />
               <div class="col-lg-6 col-md-6 col-sm-6">

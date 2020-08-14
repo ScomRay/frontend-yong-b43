@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/yong.png';
 import { Link } from 'react-router-dom';
 import { userSignOut } from '../actions/auth';
 import { connect } from 'react-redux';
@@ -14,7 +14,7 @@ class InAppHeader extends Component {
           <img src={logo} class="in-app-logo" alt="InAppLogo" />
         </div>
         <div class="header-icons">
-          <Link to={`/user/${this.props.uID}`}>
+          <Link to={`/feed`}>
             <img
               src={this.props.currentUser && this.props.currentUser.profilePic}
               class="avatar"
@@ -27,7 +27,7 @@ class InAppHeader extends Component {
                   this.props.currentUser.lName}
             </span>
           </Link>
-          <Link to="/home">
+          <Link to="/feed">
             <span class="text-icon major-padding">Home</span>
           </Link>
           <div class="float-right row">

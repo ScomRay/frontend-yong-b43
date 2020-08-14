@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/yong.png';
 export default class AppLandingHeader extends Component {
   render() {
     return (
