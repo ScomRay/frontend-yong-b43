@@ -6,7 +6,7 @@ export default class AppLandingHeader extends Component {
       <div class="app-landing-container">
         <div class="landing-logo-container">
           <img src={logo} class="landing-logo" alt="Logo" />
-          <span class="logo-text">NOTEBOOK</span>
+          <span class="logo-text">YONG</span>
         </div>
         <div class="login-form-container">
           <div class="form-group form-internal-left spacing">
